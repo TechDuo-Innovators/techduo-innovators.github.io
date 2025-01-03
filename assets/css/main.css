@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply bg-gray-200 dark:bg-gray-800;
+}
+
+section {
+    @apply bg-gray-100 dark:bg-gray-700;
+}
+
+section:nth-child(odd) {
+    @apply bg-gray-200 dark:bg-gray-800;
+}
+
+
+.text-primary {
+    @apply text-green-500;
+}
