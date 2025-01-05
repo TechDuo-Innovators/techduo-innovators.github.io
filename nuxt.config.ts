@@ -16,16 +16,13 @@ export default defineNuxtConfig({
             link: [{rel: 'icon', type: 'image/png', href: '/favicon.png'}]
         }
     },
-    // vite:{
-    //     build:{
-    //         target:'esnext'
-    //     },
-    //     esbuild: {
-    //         supported: {
-    //             'top-level-await': true
-    //         },
-    //     },
-    // },
+    vite:{
+        esbuild: {
+            supported: {
+                'top-level-await': true
+            },
+        },
+    },
     modules: [
         '@nuxt/ui',
         '@nuxt/content',
