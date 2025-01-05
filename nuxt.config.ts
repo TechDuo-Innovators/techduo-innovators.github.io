@@ -3,10 +3,8 @@ import {defineNuxtConfig} from "nuxt/config";
 
 export default defineNuxtConfig({
     compatibilityDate: '2024-11-01',
-    devtools: {enabled: true},
-    ssr: false,
+    ssr: true,
     css: ['~/assets/css/main.css'],
-    content: {},
     postcss: {
         plugins: {
             tailwindcss: {},
@@ -18,7 +16,16 @@ export default defineNuxtConfig({
             link: [{rel: 'icon', type: 'image/png', href: '/favicon.png'}]
         }
     },
-
+    // vite:{
+    //     build:{
+    //         target:'esnext'
+    //     },
+    //     esbuild: {
+    //         supported: {
+    //             'top-level-await': true
+    //         },
+    //     },
+    // },
     modules: [
         '@nuxt/ui',
         '@nuxt/content',
