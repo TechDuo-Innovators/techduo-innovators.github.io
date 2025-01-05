@@ -14,7 +14,6 @@ section:nth-child(odd) {
     @apply bg-gray-200 dark:bg-gray-800;
 }
 
-
 .text-primary {
     @apply text-green-500;
 }

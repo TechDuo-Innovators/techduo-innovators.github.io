@@ -1,8 +1,9 @@
-import data from "~/models/data";
+import content from "~/models/data";
 
-function useData(){
-    return data;
+let data: typeof content = content;
+
+function useData() {
+   return data;
 }
-
 
 export default useData

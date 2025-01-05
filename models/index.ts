@@ -1,27 +1,25 @@
-export class Proyecto {
-    nombre: string;
-    descripcion: string;
-    route: string;
+import type {MarkdownParsedContent, MarkdownRoot, ParsedContent, Toc} from '@nuxt/content'
+import * as fs from 'fs'
+import * as path from 'path'
 
-
-    constructor(nombre: string, descripcion: string, route: string) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.route = route;
-    }
+export function parseBodyContent<T>(queryResult: any): T[] {
+    let {body, ...others} = queryResult
+    return body?.map<T>((value) => {
+        return {...others, ...value}
+    })
 }
 
-export class Servicio {
+export interface Proyecto extends MarkdownParsedContent {
+    nombre: string;
+    descripcion: string;
+    image: string;
+    images: string[];
+}
+
+export interface Servicio extends ParsedContent {
     nombre: string;
     descripcion: string;
     icono: string;
-
-
-    constructor(nombre: string, descripcion: string, icono: string) {
-        this.nombre = nombre;
-        this.descripcion = descripcion;
-        this.icono = icono;
-    }
 }
 
 export class LandingInfo {

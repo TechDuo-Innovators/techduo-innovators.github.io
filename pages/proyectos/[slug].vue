@@ -1,15 +1,23 @@
 <script setup lang="ts">
-
 </script>
 
 <template>
-  <ContentDoc path="/proyectos">
+  <ContentDoc>
+    <template v-slot="{doc}">
+      <Breadcrumb :title="doc.title"
+                  :links="[{label:'Inicio',to:'/'},{label:'Proyectos',to:'/proyectos'}]"
+                  :image="doc.image"
+      />
+      <section>
+        <ContentRendererMarkdown class="container py-10 px-4 mx-auto" :value="doc"/>
+      </section>
+    </template>
     <template #empty>
-      <p>Vacio</p>
+      <h1>Vacio</h1>
     </template>
 
     <template #not-found>
-      <p>No Projects found.</p>
+      <h1>Not Found</h1>
     </template>
   </ContentDoc>
 </template>

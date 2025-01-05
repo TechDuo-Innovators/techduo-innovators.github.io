@@ -3,7 +3,7 @@
 const images = ref([
   '/projects/decalixto/1.jpg',
   '/projects/familia-velazquez/1.jpg',
-  '/projects/frateli/1.jpg',
+  '/projects/vimafoods/1.jpg',
   '/projects/xprobots/1.jpg',
 ])
 </script>

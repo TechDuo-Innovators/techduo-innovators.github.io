@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useHead({title: 'Sobre Nosotros'})
 
 </script>
 
@@ -6,7 +7,6 @@
   <Breadcrumb title="Sobre Nosotros" :links="[{label:'Inicio',to:'/'}]"/>
   <AboutUsOurSection/>
   <AboutUsOurValuesSection/>
-  <AboutUsContactSection/>
 </template>
 
 <style scoped>

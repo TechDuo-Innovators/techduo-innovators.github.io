@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import Header from "~/components/Header.vue";
+
+const {showContactUs = true} = defineProps<{ showContactUs: boolean }>()
 </script>
 
 <template>
   <Header/>
-  <slot/>
+  <div class="main">
+    <slot/>
+    <ContactSection v-if="showContactUs"/>
+  </div>
   <Footer/>
 </template>
 
